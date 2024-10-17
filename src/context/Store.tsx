@@ -1,6 +1,13 @@
-import { createContext, Dispatch, ReactNode, useReducer } from "react";
+import {
+  createContext,
+  Dispatch,
+  ReactNode,
+  useEffect,
+  useReducer,
+} from "react";
 import type { Participant } from "@/types.ts";
 import { Action } from "@/context/Action.ts";
+import { getContacts } from "@/features/contacts/api.ts";
 
 export type Store = {
   activeChatParticipantId: Participant["user_id"];
@@ -49,6 +56,17 @@ export const messagesReducer = (state: Store, action: Actions) => {
 export const StoreProvider = ({ children }: { children: ReactNode }) => {
   const initialState = { activeChatParticipantId: "" };
   const [store, dispatch] = useReducer(messagesReducer, initialState);
+
+  /**
+   * Prefilling this to have a default one selected here.
+   * Ideally, these contacts will always be there (considering they're from a friend list or phone)
+   */
+
+  useEffect(() => {
+    getContacts().then(([contact]) => {
+      dispatch({ type: Action.SELECT_PARTICIPANT, payload: contact.user_id });
+    });
+  }, []);
   return (
     <StoreContext.Provider value={{ store, dispatch }}>
       {children}
