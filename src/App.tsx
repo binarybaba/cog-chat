@@ -1,13 +1,10 @@
+import { ContactList } from "@/features/contacts/ContactList.tsx";
+
 function App() {
   return (
     <div className="h-screen flex">
-      <div className="w-[240px] bg-gray-200 overflow-y-auto">
-        <ul>
-          <li>simen</li>
-          <li>kris</li>
-          <li>mikael</li>
-          <li>gleb</li>
-        </ul>
+      <div className="w-[300px] bg-white overflow-y-auto">
+        <ContactList />
       </div>
       <div className="flex-1 flex flex-col">
         <div className="p-4 border-b">
