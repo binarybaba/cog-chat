@@ -1,9 +1,9 @@
 import { createContext, Dispatch, ReactNode, useReducer } from "react";
-import type { Contact } from "@/types.ts";
+import type { Participant } from "@/types.ts";
 import { Action } from "@/context/Action.ts";
 
 export type Store = {
-  activeChatParticipantId: Contact["user_id"];
+  activeChatParticipantId: Participant["user_id"];
 };
 
 export type Actions =

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { getContacts } from "@/features/contacts/api.ts";
-import { Contact } from "@/types.ts";
+import { Participant } from "@/types.ts";
 import { ChatContact } from "@/features/contacts/components/ChatContact.tsx";
 
 export const ContactList = () => {
-  const [contacts, setContacts] = useState<Contact[]>([]);
+  const [contacts, setContacts] = useState<Participant[]>([]);
   useEffect(() => {
     /**
      * Doesn't make sense to use thunks for such a small app

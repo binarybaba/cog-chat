@@ -1,4 +1,5 @@
 import { ContactList } from "@/features/contacts/ContactList.tsx";
+import { Desk } from "@/features/desk/Desk.tsx";
 import { StoreProvider } from "@/context/Store.tsx";
 
 function App() {
@@ -8,10 +9,7 @@ function App() {
         <div className="w-[300px] bg-white overflow-y-auto border-r border-gray-100">
           <ContactList />
         </div>
-        <div className="flex-1 flex flex-col">
-          <div className="p-4 border-b">
-            <div className="text-lg font-semibold">simen</div>
-          </div>
+        <Desk>
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             <div className="flex">
               <p>Yo</p>
@@ -78,7 +76,7 @@ function App() {
           <div className="p-4 border-t">
             <textarea name="" id="" className="w-full p-2 border rounded" />
           </div>
-        </div>
+        </Desk>
       </div>
     </StoreProvider>
   );

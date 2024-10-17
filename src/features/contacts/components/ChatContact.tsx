@@ -1,12 +1,12 @@
 import classNames from "classnames";
 import { useStoreContext } from "@/hooks/useStoreContext.ts";
-import { Contact } from "@/types.ts";
+import { Participant } from "@/types.ts";
 import { Action } from "@/context/Action.ts";
 
 type Props = {
-  id: Contact["user_id"];
+  id: Participant["user_id"];
   name: string;
-  photoUrl: Contact["photo_url"];
+  photoUrl: Participant["photo_url"];
 };
 export const ChatContact = ({ id, photoUrl, name }: Props) => {
   const {
