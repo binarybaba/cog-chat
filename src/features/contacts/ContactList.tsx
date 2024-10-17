@@ -1,31 +1,28 @@
 import { useEffect, useState } from "react";
 import { getContacts } from "@/features/contacts/api.ts";
 import { Contact } from "@/types.ts";
+import { ChatContact } from "@/features/contacts/components/ChatContact.tsx";
 
 export const ContactList = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   useEffect(() => {
+    /**
+     * Doesn't make sense to use thunks for such a small app
+     * I'm an async/await fan. But since it doesn't have first class support
+     * in useEffect... well... here we go:
+     */
     getContacts().then((contacts) => setContacts(contacts));
   }, []);
+
   return (
     <div className="flex flex-col gap-y-[8px] p-1">
-      {contacts.map((contact) => (
-        <div className="h-[64px] bg-white w-full flex items-center rounded cursor-pointer hover:bg-gray-50">
-          <img
-            className="h-12 w-12 rounded-full object-fill ml-[10px]"
-            src={contact.photo_url}
-            alt={contact.name}
-          />
-          <div className="flex justify-between w-full items-center">
-            <div className="ml-[10px]">
-              <div className="text-md font-semibold text-gray-500">
-                {contact.name}
-              </div>
-              <div className="text-xs text-gray-400">some message</div>
-            </div>
-            <div className="mr-2 text-xs text-gray-400">22:00</div>
-          </div>
-        </div>
+      {contacts.map(({ user_id, photo_url, name }) => (
+        <ChatContact
+          key={user_id}
+          id={user_id}
+          photoUrl={photo_url}
+          name={name}
+        />
       ))}
     </div>
   );
