@@ -1,6 +1,7 @@
 import { ContactList } from "@/features/contacts/ContactList.tsx";
 import { Desk } from "@/features/desk/Desk.tsx";
 import { StoreProvider } from "@/context/Store.tsx";
+import { TextArea } from "@/features/desk/components/TextArea.tsx";
 
 function App() {
   return (
@@ -73,9 +74,7 @@ function App() {
               <p>Yea ok. we move to brewgata then</p>
             </div>
           </div>
-          <div className="p-4 border-t">
-            <textarea name="" id="" className="w-full p-2 border rounded" />
-          </div>
+          <TextArea />
         </Desk>
       </div>
     </StoreProvider>
