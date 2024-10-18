@@ -6,9 +6,9 @@ import {
   useReducer,
 } from "react";
 import type { Chat, Participant } from "@/types.ts";
-import { Action } from "@/context/Action.ts";
+import { Action, Actions } from "@/context/Action.ts";
 import { getContacts } from "@/features/contacts/api.ts";
-import { makeMessage } from "@/context/handlers.ts";
+import { reducer } from "@/context/reducer.ts";
 import { getChat } from "@/features/desk/api.ts";
 
 export type Store = {
@@ -16,21 +16,6 @@ export type Store = {
   chat?: Chat;
   activeChatParticipantId: Participant["user_id"];
 };
-
-export type Actions =
-  | {
-      type: Action.SET_PARTICIPANT;
-      payload: string;
-    }
-  | {
-      type: Action.SEND_MESSAGE;
-      payload: {
-        receiverId: Participant["user_id"];
-        content: string;
-      };
-    }
-  | { type: Action.SET_SENDER; payload: Participant }
-  | { type: Action.SET_CHAT; payload: Chat };
 
 export const StoreContext = createContext<{
   store: Store;
@@ -48,46 +33,6 @@ export const StoreContext = createContext<{
   dispatch: () => {},
 });
 
-export const messagesReducer = (state: Store, action: Actions) => {
-  const { type } = action;
-  switch (type) {
-    case Action.SET_SENDER: {
-      const { payload } = action;
-      const _state = Object.assign({}, state);
-      _state.sender = payload;
-      return _state;
-    }
-
-    case Action.SET_PARTICIPANT: {
-      return {
-        ...state,
-        activeChatParticipantId: action.payload,
-      };
-    }
-    case Action.SET_CHAT: {
-      const _state = Object.assign({}, state);
-      _state.chat = action.payload;
-      return _state;
-    }
-    case Action.SEND_MESSAGE: {
-      const { payload } = action;
-      const { receiverId, content } = payload;
-
-      const message = makeMessage({
-        sender: state.sender,
-        receiverId,
-        content,
-      });
-      const _state = Object.assign({}, state);
-      _state.chat?.messages.push(message);
-      console.log(_state);
-      return _state;
-    }
-    default:
-      return state;
-  }
-};
-
 export const StoreProvider = ({ children }: { children: ReactNode }) => {
   const defaultSender = {
     user_id: "amin",
@@ -104,7 +49,7 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
       name: "",
     },
   };
-  const [store, dispatch] = useReducer(messagesReducer, initialState);
+  const [store, dispatch] = useReducer(reducer, initialState);
 
   /**
    * Prefilling this to have a default one selected here.
