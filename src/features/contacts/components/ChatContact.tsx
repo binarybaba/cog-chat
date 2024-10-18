@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { useStoreContext } from "@/hooks/useStoreContext.ts";
 import { Participant } from "@/types.ts";
 import { Action } from "@/context/Action.ts";
+import { getChat } from "@/features/desk/api.ts";
 
 type Props = {
   id: Participant["user_id"];
@@ -9,12 +10,17 @@ type Props = {
   photoUrl: Participant["photo_url"];
 };
 export const ChatContact = ({ id, photoUrl, name }: Props) => {
-  const {
-    store: { activeChatParticipantId: activeId },
-    dispatch,
-  } = useStoreContext();
+  const { store, dispatch } = useStoreContext();
+  const activeId = store.activeChatParticipantId;
+  const senderId = store.sender.user_id;
   const handleContactClick = (payload: string) => {
-    dispatch({ type: Action.SELECT_PARTICIPANT, payload });
+    dispatch({ type: Action.SET_PARTICIPANT, payload });
+    getChat({ receiverId: payload, senderId }).then((chat) => {
+      dispatch({
+        type: Action.SET_CHAT,
+        payload: chat,
+      });
+    });
   };
 
   return (

@@ -12,7 +12,7 @@ export type MessageReaction = {
 };
 
 export type Message = {
-  message_id: "string";
+  message_id: string;
   sender: Participant;
   receiver: Participant;
   content: string;

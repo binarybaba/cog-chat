@@ -1,15 +1,24 @@
 import { useStoreContext } from "@/hooks/useStoreContext.ts";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Action } from "@/context/Action.ts";
 
 const MIN_HEIGHT = 80;
 
 export const TextArea = () => {
-  const { store } = useStoreContext();
+  const { store, dispatch } = useStoreContext();
+  const receiverId = store.activeChatParticipantId;
   const [text, setText] = useState("");
   const ref = useRef<HTMLTextAreaElement>(null);
 
+  useEffect(() => {
+    setText("");
+  }, [receiverId]);
+
   const sendMessage = async () => {
-    console.log(text);
+    dispatch({
+      type: Action.SEND_MESSAGE,
+      payload: { receiverId, content: text },
+    });
     setText("");
     // because there's a race between what's rendered and what's in ref
     setTimeout(() => {

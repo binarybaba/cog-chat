@@ -1,0 +1,322 @@
+[
+  {
+    "chat_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "chat_type": "1:1",
+    "participants": ["amin", "gleb"],
+    "messages": [
+      {
+        "message_id": "9f3d2a18-23b4-4a42-8b21-b12bc6f3d108",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Yo",
+        "timestamp": "2030-10-17T18:00:00Z"
+      },
+      {
+        "message_id": "9a6c9352-4a2e-4b3a-95f2-980da587b46b",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Wanna hang out?",
+        "timestamp": "2030-10-17T18:01:00Z"
+      },
+      {
+        "message_id": "1e3859b2-486a-4d7e-83b2-c9276f3dcbd2",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "receiver": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "content": "Not tonight. doing cognite assignment",
+        "timestamp": "2030-10-17T18:02:00Z"
+      },
+      {
+        "message_id": "64f5db8c-287a-47f8-82b4-0983b216e11d",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Cool lemme know if you get free",
+        "timestamp": "2030-10-17T18:03:00Z"
+      },
+      {
+        "message_id": "a8793dd4-52e6-47c5-9b1a-5f85d77fb7b1",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "receiver": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "content": "yeah ok",
+        "timestamp": "2030-10-17T18:04:00Z"
+      },
+      {
+        "message_id": "d3c9d517-8ac7-45e2-b7c1-7a925365a0cc",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "how long is it gonna take?",
+        "timestamp": "2030-10-17T18:05:00Z"
+      },
+      {
+        "message_id": "6ef8fa6c-bb3b-47a5-bc78-42930fe34256",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "receiver": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "content": "I don't know.. maybe like a couple of hours",
+        "timestamp": "2030-10-17T18:06:00Z"
+      },
+      {
+        "message_id": "81e543fc-13f9-43ad-bb58-abb7b9638b7d",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "me and isabel are going to himkok",
+        "timestamp": "2030-10-17T18:07:00Z"
+      },
+      {
+        "message_id": "fe6eb5b1-babe-4a3d-83be-76f54d2e1b56",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "we will be there until 11. see if you can wrap it up and come over?",
+        "timestamp": "2030-10-17T18:08:00Z"
+      },
+      {
+        "message_id": "d6e5b3d1-8d2f-4fbe-97a6-18c92077469c",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "receiver": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "content": "I cant stand her sorry. too loud",
+        "timestamp": "2030-10-17T18:09:00Z"
+      },
+      {
+        "message_id": "ac1d8b2a-5e9e-4714-a3cb-b2e5e1d1d2fb",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Elisabeth is also coming",
+        "timestamp": "2030-10-17T18:10:00Z"
+      },
+      {
+        "message_id": "b83f7e1d-8e7e-441e-8c0e-307bece34034",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "receiver": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "content": "The plot thickens",
+        "timestamp": "2030-10-17T18:11:00Z"
+      },
+      {
+        "message_id": "8bc7e3ad-8e71-4023-98f9-125ae79fa7d1",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "And I think jakub might also join.",
+        "timestamp": "2030-10-17T18:12:00Z"
+      },
+      {
+        "message_id": "07f8dada-7d8a-4140-8b9b-0fa4c0e84c3a",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "receiver": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "content": "Jesus christ its like a carnival.\n\nwhy the fuck would you guys choose a thursday?! Don't you guys have to get to work tomorrow?",
+        "timestamp": "2030-10-17T18:13:00Z"
+      },
+      {
+        "message_id": "b4e7e6a7-b2f4-4982-b2d3-69d022e59b29",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "receiver": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "content": "Oh wait, you work as a PM. That's not a real job..",
+        "timestamp": "2030-10-17T18:14:00Z"
+      },
+      {
+        "message_id": "4b34a0a6-fd91-4986-8517-83433c8d2b48",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "When will you be done?",
+        "timestamp": "2030-10-17T18:15:00Z"
+      },
+      {
+        "message_id": "e7b83b7a-8aa4-4139-9344-5d2496f30f0f",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "receiver": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "content": "Couple of hours. Will take an hour to come so maybe 11ish",
+        "timestamp": "2030-10-17T18:16:00Z"
+      },
+      {
+        "message_id": "49fe6b88-d2ef-42f4-a241-95de0a4e420b",
+        "sender": {
+          "user_id": "gleb",
+          "name": "Gleb"
+        },
+        "receiver": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Yea ok. we move to brewgata then",
+        "timestamp": "2030-10-17T18:17:00Z"
+      }
+    ]
+  },
+  {
+    "chat_id": "9b7e36d9-3262-45c7-8b12-3d00e8d4c15f",
+    "chat_type": "1:1",
+    "participants": ["amin", "oleks_ivanov"],
+    "messages": [
+      {
+        "message_id": "msg_1",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Fucking stupid bag ruined all the pictures 😂",
+        "timestamp": "2023-06-07T21:52:20Z"
+      },
+      {
+        "message_id": "msg_2",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Dude THANK YOU SO MUCH. Today was very very nice.",
+        "timestamp": "2023-06-07T21:52:30Z"
+      },
+      {
+        "message_id": "msg_3",
+        "sender": {
+          "user_id": "oleks_ivanov",
+          "name": "Oleks Ivanov"
+        },
+        "content": "Hahaha",
+        "timestamp": "2023-06-07T21:54:05Z"
+      },
+      {
+        "message_id": "msg_4",
+        "sender": {
+          "user_id": "oleks_ivanov",
+          "name": "Oleks Ivanov"
+        },
+        "content": "Never do that again",
+        "timestamp": "2023-06-07T21:54:05Z"
+      },
+      {
+        "message_id": "msg_5",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Nope. Learnt my lesson.",
+        "timestamp": "2023-06-07T21:54:17Z"
+      },
+      {
+        "message_id": "msg_6",
+        "sender": {
+          "user_id": "oleks_ivanov",
+          "name": "Oleks Ivanov"
+        },
+        "content": "No prob man. It was a joy to see you enjoying it so much",
+        "timestamp": "2023-06-07T21:54:30Z"
+      },
+      {
+        "message_id": "msg_7",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "I would love to go again. But I also don't want to keep slowing you down. And that's why I won't push you. But if you wanna do it again, just hit me up and we will go!\n\nWithout the bag",
+        "timestamp": "2023-06-07T21:55:13Z"
+      },
+      {
+        "message_id": "msg_8",
+        "sender": {
+          "user_id": "oleks_ivanov",
+          "name": "Oleks Ivanov"
+        },
+        "content": "Yeah, I’ll do it\n\nMaybe take Simen too\n\nHe’s keen, I’ve heard",
+        "timestamp": "2023-06-07T22:10:09Z"
+      }
+    ]
+  }
+]
