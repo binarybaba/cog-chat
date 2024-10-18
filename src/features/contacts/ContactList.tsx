@@ -16,12 +16,13 @@ export const ContactList = () => {
 
   return (
     <div className="flex flex-col gap-y-[8px] p-1">
-      {contacts.map(({ user_id, photo_url, name }) => (
+      {contacts.map(({ user_id, photo_url, name, last_seen }) => (
         <ChatContact
           key={user_id}
           id={user_id}
           photoUrl={photo_url}
           name={name}
+          lastSeen={last_seen}
         />
       ))}
     </div>

@@ -51,7 +51,7 @@ export const TextArea = () => {
   };
 
   return (
-    <div className="p-4 border-t">
+    <div className="p-4 border-t bg-gray-50">
       <textarea
         ref={ref}
         value={text}

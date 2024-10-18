@@ -4,12 +4,19 @@ import { Participant } from "@/types.ts";
 import { Action } from "@/context/Action.ts";
 import { getChat } from "@/features/desk/api.ts";
 
+const toDDMM = (datestring: string) => {
+  const date = new Date(datestring);
+  return `${String(date.getDay()).padStart(2, "0")}.${String(date.getMonth()).padStart(2, "0")}`;
+};
+
 type Props = {
   id: Participant["user_id"];
   name: string;
   photoUrl: Participant["photo_url"];
+  lastSeen: string;
 };
-export const ChatContact = ({ id, photoUrl, name }: Props) => {
+
+export const ChatContact = ({ id, photoUrl, name, lastSeen }: Props) => {
   const { store, dispatch } = useStoreContext();
   const activeId = store.activeChatParticipantId;
   const senderId = store.sender.user_id;
@@ -52,7 +59,9 @@ export const ChatContact = ({ id, photoUrl, name }: Props) => {
           >
             {name}
           </div>
-          <div className="text-xs text-gray-400 select-none">some message</div>
+          <div className="text-xs text-gray-400 select-none max-w-[100px] truncate">
+            last active: {toDDMM(lastSeen)}
+          </div>
         </div>
         <div className="mr-2 text-xs text-gray-400 select-none">22:00</div>
       </div>
