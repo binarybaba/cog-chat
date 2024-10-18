@@ -18,7 +18,7 @@ type Props = {
 
 export const ChatContact = ({ id, photoUrl, name, lastSeen }: Props) => {
   const { store, dispatch } = useStoreContext();
-  const activeId = store.activeChatParticipantId;
+  const activeId = store.activeParticipantId;
   const senderId = store.sender.user_id;
   const handleContactClick = (payload: string) => {
     dispatch({ type: Action.SET_PARTICIPANT, payload });

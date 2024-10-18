@@ -318,5 +318,39 @@
         "timestamp": "2023-06-07T22:10:09Z"
       }
     ]
+  },
+  {
+    "chat_id": "d7ac10b3-58cc-47b2-a567-0e02b2c3d888",
+    "chat_type": "1:1",
+    "participants": ["amin", "stef"],
+    "messages": [
+      {
+        "message_id": "msg_9",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Did you also read Manager's path?",
+        "timestamp": "2023-06-08T18:00:00Z"
+      },
+      {
+        "message_id": "msg_10",
+        "sender": {
+          "user_id": "stef",
+          "name": "Stefania"
+        },
+        "content": "Manager’s what?",
+        "timestamp": "2023-06-08T18:05:00Z"
+      },
+      {
+        "message_id": "msg_11",
+        "sender": {
+          "user_id": "amin",
+          "name": "Amin"
+        },
+        "content": "Can literally hear the “what”",
+        "timestamp": "2023-06-08T18:07:00Z"
+      }
+    ]
   }
 ]

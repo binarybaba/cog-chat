@@ -6,10 +6,12 @@ import { Participant } from "@/types.ts";
 export const Desk = ({ children }: { children: ReactNode }) => {
   const { store } = useStoreContext();
   const [participant, setParticipant] = useState<Participant>();
-  const { activeChatParticipantId: activeId } = store;
+  const { activeParticipantId: activeId } = store;
+
   useEffect(() => {
     getParticipant(activeId).then((participant) => setParticipant(participant));
   }, [activeId]);
+
   return (
     <div className="flex-1 flex flex-col">
       <div className="h-[54px] flex items-center bg-gray-50 border-b border-b-gray-200">

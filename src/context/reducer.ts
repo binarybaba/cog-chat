@@ -7,15 +7,16 @@ export const reducer = (state: Store, action: Actions) => {
   switch (type) {
     case Action.SET_SENDER: {
       const { payload } = action;
-      const _state = Object.assign({}, state);
-      _state.sender = payload;
-      return _state;
+      return {
+        ...state,
+        sender: payload,
+      };
     }
 
     case Action.SET_PARTICIPANT: {
       return {
         ...state,
-        activeChatParticipantId: action.payload,
+        activeParticipantId: action.payload,
       };
     }
     case Action.SET_CHAT: {

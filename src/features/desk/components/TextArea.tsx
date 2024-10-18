@@ -1,12 +1,12 @@
 import { useStoreContext } from "@/hooks/useStoreContext.ts";
-import { useEffect, useRef, useState } from "react";
+import { ChangeEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
 import { Action } from "@/context/Action.ts";
 
 const MIN_HEIGHT = 80;
 
 export const TextArea = () => {
   const { store, dispatch } = useStoreContext();
-  const receiverId = store.activeChatParticipantId;
+  const receiverId = store.activeParticipantId;
   const [text, setText] = useState("");
   const ref = useRef<HTMLTextAreaElement>(null);
 
@@ -26,7 +26,7 @@ export const TextArea = () => {
     }, 0);
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       sendMessage();
@@ -43,7 +43,7 @@ export const TextArea = () => {
     textarea.style.height = `${textarea.scrollHeight}px`;
   };
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const { target } = e;
     const { value: text } = target;
     setText(text);

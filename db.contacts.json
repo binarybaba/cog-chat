@@ -12,9 +12,39 @@
     "last_seen": "2024-10-17T12:45:50Z"
   },
   {
+    "user_id": "stef",
+    "name": "Stefania",
+    "photo_url": "https://xsgames.co/randomusers/assets/avatars/female/75.jpg",
+    "last_seen": "2024-10-17T16:20:30Z"
+  },
+  {
     "user_id": "jerryjerry",
     "name": "Jerry",
     "photo_url": "https://xsgames.co/randomusers/assets/avatars/male/75.jpg",
     "last_seen": "2024-10-17T16:20:30Z"
+  },
+  {
+    "user_id": "mikhail_k",
+    "name": "Mikhail",
+    "photo_url": "https://xsgames.co/randomusers/assets/avatars/male/2.jpg",
+    "last_seen": "2024-10-17T10:22:15Z"
+  },
+  {
+    "user_id": "veronica_lee",
+    "name": "Veronica",
+    "photo_url": "https://xsgames.co/randomusers/assets/avatars/female/74.jpg",
+    "last_seen": "2024-10-17T09:15:20Z"
+  },
+  {
+    "user_id": "andrei_smith",
+    "name": "Andrei",
+    "photo_url": "https://xsgames.co/randomusers/assets/avatars/male/24.jpg",
+    "last_seen": "2024-10-17T11:45:00Z"
+  },
+  {
+    "user_id": "maria_b",
+    "name": "Maria",
+    "photo_url": "https://xsgames.co/randomusers/assets/avatars/female/76.jpg",
+    "last_seen": "2024-10-17T15:10:45Z"
   }
 ]

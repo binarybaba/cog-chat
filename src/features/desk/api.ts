@@ -1,6 +1,6 @@
 import allContacts from "../../../db.contacts.json";
 import allChats from "../../../db.chats.json";
-import type { Chat, Message, Participant } from "@/types.ts";
+import type { Chat, Participant } from "@/types.ts";
 
 export const getParticipant = (id: string): Promise<Participant> => {
   const contact = allContacts.find((contact) => contact.user_id === id);
@@ -27,13 +27,4 @@ export const getChat = ({
   );
   // @ts-expect-error it will always be resolved since we doing static db.
   return Promise.resolve(chat);
-};
-
-export const getLatestMessage = ({ senderId, receiverId }): Message => {
-  const chat = allChats.find(
-    (chat) =>
-      chat.participants.includes(senderId) &&
-      chat.participants.includes(receiverId),
-  );
-  return chat?.messages[chat.messages.length - 1];
 };
