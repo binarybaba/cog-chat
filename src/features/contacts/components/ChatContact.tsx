@@ -34,9 +34,9 @@ export const ChatContact = ({ id, photoUrl, name, lastSeen }: Props) => {
     <div
       key={id}
       className={classNames(
-        "h-[64px] bg-white w-full flex items-center rounded cursor-pointer transition-colors",
+        "h-[64px] bg-white w-full flex items-center rounded cursor-pointer transition-colors ",
         {
-          "bg-gray-100": activeId === id,
+          "bg-gray-200": activeId === id,
           "hover:bg-gray-50": activeId !== id,
         },
       )}
